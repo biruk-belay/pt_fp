@@ -25,10 +25,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        pt_fp.cpp
+        csv_data_manipulator.cpp \
+        pt_fp.cpp \
+    zynq_model.cpp \
+    fpga.cpp \
+    task_set.cpp \
+    generate_fp.cpp
+
+LIBS += \
+       -lgurobi_g++5.2\
+       -lgurobi_c++\
+       -lgurobi70
 
 HEADERS += \
-        pt_fp.h
+        pt_fp.h \
+        csv_data_manipulator.hpp \
+        fpga.h \
+    zynq_model.h \
+    partition.h \
+    generate_fp.h
 
 FORMS += \
     fp.ui
